@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+            font-family: 'Myriadpro';
+            src: url('fonts/myriadpro-light.woff2') format('woff2'),
+            url('fonts/myriadpro-light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Myriadpro';
+            src: url('fonts/myriadpro-regular.woff2') format('woff2'),
+            url('fonts/myriadpro-regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Myriadpro';
+            src: url('fonts/myriadpro-bold.woff2') format('woff2'),
+            url('fonts/myriadpro-bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        html {
+            font-family: Myriadpro, Arial, sans-serif;
+        }
+
+
+        .footer {
+            margin-bottom: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-top: 1px solid grey;
+            display: flex;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            position: sticky;
+            bottom: 0;
+            background-color: whitesmoke;
+        }
+
+        .footer__col {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        input {
+            width: 30px;
+            text-align: center;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        button {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 3px 13px;
+
+        }
+
+
+    </style>
+
+</head>
+<body style="font-size: 16px; line-height: 1.5">
+<p style="font-weight: 300">Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет оценить значение модели развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании модели развития.</p>
+<p style="font-weight: 400">С другой стороны постоянный количественный рост и сфера нашей активности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Не следует, однако забывать, что сложившаяся структура организации в значительной степени обуславливает создание модели развития. Таким образом укрепление и развитие структуры позволяет оценить значение существенных финансовых и административных условий. С другой стороны рамки и место обучения кадров в значительной степени обуславливает создание существенных финансовых и административных условий. Таким образом консультация с широким активом требуют от нас анализа направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет оценить значение модели развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании модели развития.</p>
+<p style="font-weight: 700">Разнообразный и богатый опыт сложившаяся структура организации позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Равным образом дальнейшее развитие различных форм деятельности играет важную роль в формировании существенных финансовых и административных условий. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации существенных финансовых и административных условий.</p>
+<div class="footer">
+    <div class="footer__col">
+        <button class="js-minus-font" data-diff="-1" data-style="fontSize">-</button>
+        <input type="text" readonly class="js-input-font" value="16">
+        <button class="js-plus-font" data-diff="1" data-style="fontSize">-</button>
+    </div>
+    <div class="footer__col">
+        <button class="js-minus-line" data-diff="-0.1" data-style="lineHeight">-</button>
+        <input type="text" readonly class="js-input-line" value="1.5">
+        <button class="js-plus-line" data-diff="0.1" data-style="lineHeight">-</button>
+    </div>
+</div>
+
+<script>
+    var fontMinus = document.querySelector('.js-minus-font');
+    var fontPlus = document.querySelector('.js-plus-font');
+    var fontSize = document.querySelector('.js-input-font');
+
+    var lineMinus = document.querySelector('.js-minus-line');
+    var linePlus = document.querySelector('.js-plus-line');
+    var lineHeight = document.querySelector('.js-input-line');
+
+    function change() {
+        var diff = Number(this.dataset.diff);
+        var style = this.dataset.style;
+
+        var newValue = Math.round((Number(window[style].value) + diff) * 10) / 10;
+
+        console.log(window[style].value);
+        console.log(diff);
+
+        window[style].value = newValue;
+        document.body.style[style] = newValue + (style === 'fontSize' ? 'px' : '');
+
+
+    }
+
+    fontMinus.addEventListener('click', change);
+    fontPlus.addEventListener('click', change);
+
+    lineMinus.addEventListener('click', change);
+    linePlus.addEventListener('click', change);
+
+</script>
+
+</body>
+</html>
