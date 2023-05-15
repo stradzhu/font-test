@@ -1,0 +1,47 @@
+/*
+Book 350
+Regular 400
+Medium 500
+Bold 700
+Black (Heavy) 900
+*/
+
+@font-face {
+	font-family: 'Neue Frutiger World';
+	font-style: normal;
+	font-weight: 350;
+	font-display: swap;
+	src: url(fonts/neue-frutiger-world/neue-frutiger-world-book.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Neue Frutiger World';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(fonts/neue-frutiger-world/neue-frutiger-world-regular.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Neue Frutiger World';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(fonts/neue-frutiger-world/neue-frutiger-world-medium.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Neue Frutiger World';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(fonts/neue-frutiger-world/neue-frutiger-world-bold.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Neue Frutiger World';
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url(fonts/neue-frutiger-world/neue-frutiger-world-heavy.woff2) format('woff2');
+}
